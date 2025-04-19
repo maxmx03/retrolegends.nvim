@@ -1,9 +1,12 @@
 # Retrolegends
 
 ![Neovim](https://img.shields.io/badge/Neovim-blue?NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
+[![Vim](https://img.shields.io/badge/Vim-%2311AB00.svg?logo=vim&logoColor=white)](#)
 ![LICENSE](https://shields.io/badge/LICENSE-MIT-orange?style=for-the-badge)
 
-## Installation
+## Neovim
+
+### Installation
 
 To install Retrolegends, you need a plugin manager.
 In the example, bellow we are going to use lazy.nvim.
@@ -27,11 +30,11 @@ return {
 }
 ```
 
-## Transparency
+### Transparency
 
-vim.g.retrolegends_transparency = true
+`vim.g.retrolegends_transparency = true`
 
-## Plugins
+### Plugins
 
 Bellow are the Retrolegends supported plugins.
 Enable the plugins you want.
@@ -45,4 +48,78 @@ vim.g.retrolegends_gitsigns = true
 vim.g.retrolegends_nvimtree = true
 vim.g.retrolegends_cmp = true
 vim.g.retrolegends_markview = true
+```
+
+## Vim
+
+### Installation
+
+To install Retrolegends, you need a plugin manager.
+In the example, bellow we are going to use vim-plug.
+
+```vim
+Plug 'maxmx03/retrolegends.nvim', { 'branch': 'vim' }
+
+colorscheme retrolegends
+```
+
+### Transparency
+
+`let g:retrolegends_transparency = 0`
+
+### Plugins
+
+Bellow are the Retrolegends supported plugins.
+Enable the plugins you want.
+
+```vim
+let g:retrolegends_treesitter = 1
+let g:retrolegends_lspconfig = 1
+let g:retrolegends_telescope = 1
+let g:retrolegends_dashboard = 1
+let g:retrolegends_gitsigns = 1
+let g:retrolegends_nvimtree = 1
+let g:retrolegends_cmp = 1
+let g:retrolegends_markview = 1
+```
+
+## Vim 9 (vim only)
+
+### Installation
+
+To install Retrolegends, you need a plugin manager.
+In the example, bellow we are going to use vim-plug.
+
+```vim
+vim9script
+
+plug#begin()
+
+Plug 'maxmx03/retrolegends.nvim', { 'branch': 'vim9' }
+
+plug#end()
+
+colorscheme retrolegends
+```
+
+### Transparency
+
+g:retrolegends_transparency = true
+
+### Plugins
+
+Bellow are the Retrolegends supported plugins.
+Enable the plugins you want.
+
+```vim
+vim9script
+
+g:retrolegends_treesitter = true
+g:retrolegends_lspconfig = true
+g:retrolegends_telescope = true
+g:retrolegends_dashboard = true
+g:retrolegends_gitsigns = true
+g:retrolegends_nvimtree = true
+g:retrolegends_cmp = true
+g:retrolegends_markview = true
 ```
