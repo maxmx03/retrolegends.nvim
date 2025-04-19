@@ -105,21 +105,3 @@ colorscheme retrolegends
 ### Transparency
 
 g:retrolegends_transparency = true
-
-### Plugins
-
-Bellow are the Retrolegends supported plugins.
-Enable the plugins you want.
-
-```vim
-vim9script
-
-g:retrolegends_treesitter = true
-g:retrolegends_lspconfig = true
-g:retrolegends_telescope = true
-g:retrolegends_dashboard = true
-g:retrolegends_gitsigns = true
-g:retrolegends_nvimtree = true
-g:retrolegends_cmp = true
-g:retrolegends_markview = true
-```
