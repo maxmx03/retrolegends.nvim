@@ -1,5 +1,8 @@
 # Retrolegends
 
+![screenshot1](https://github.com/user-attachments/assets/32cb6901-bc71-4cd7-9075-4eb91e3aacac)
+
+
 Credit and Reference: [iTerm2](https://github.com/mbadolato/iTerm2-Color-Schemes)
 
 ![Neovim](https://img.shields.io/badge/Neovim-blue?NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
