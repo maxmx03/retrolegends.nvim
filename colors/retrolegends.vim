@@ -186,7 +186,5 @@ hi Todo guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
 hi Added guifg=#00af00 guibg=NONE gui=NONE cterm=NONE
 hi Changed guifg=#f7bf2b guibg=NONE gui=NONE cterm=NONE
 hi Removed guifg=#ff6666 guibg=NONE gui=NONE cterm=NONE
-if g:retrolegends_treesitter
-endif
 
 unlet g:retrolegends_transparency
