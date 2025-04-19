@@ -274,7 +274,6 @@ vim.api.nvim_set_hl(0, 'Todo', { fg = '#45eb45' })
 vim.api.nvim_set_hl(0, 'Added', { fg = '#00af00' })
 vim.api.nvim_set_hl(0, 'Changed', { fg = '#f7bf2b' })
 vim.api.nvim_set_hl(0, 'Removed', { fg = '#ff6666' })
-
 if vim.g.retrolegends_treesitter then
   vim.api.nvim_set_hl(0, '@variable', { link = 'Identifier' })
   vim.api.nvim_set_hl(0, '@variable.builtin', { link = 'Constant' })
@@ -430,6 +429,8 @@ if vim.g.retrolegends_gitsigns then
 end
 
 if vim.g.retrolegends_nvimtree then
+  vim.api.nvim_set_hl(0, 'NvimTreeFolderName', { fg = '#4c80ff' })
+  vim.api.nvim_set_hl(0, 'NvimTreeFolderIcon', { fg = '#4c80ff' })
   vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = '#000000' })
   vim.api.nvim_set_hl(0, 'NvimTreeGitDeletedIcon', { fg = '#ff6666' })
   vim.api.nvim_set_hl(0, 'NvimTreeGitDirtyIcon', { fg = '#f7bf2b' })
@@ -545,3 +546,4 @@ vim.defer_fn(function()
   vim.api.nvim_del_var('retrolegends_cmp')
   vim.api.nvim_del_var('retrolegends_markview')
 end, 800)
+
