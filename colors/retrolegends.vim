@@ -61,6 +61,7 @@ hi TermCursor guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
 hi TermCursorNC guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
 hi ErrorMsg guifg=#ff005f guibg=NONE gui=NONE cterm=NONE
 hi WinSeparator guifg=#1c1c1c guibg=NONE gui=NONE cterm=NONE
+hi! link VertSplit WinSeparator
 hi Folded guifg=#dadada guibg=#1c1c1c gui=NONE cterm=NONE
 hi FoldColumn guifg=#dadada guibg=#1c1c1c gui=NONE cterm=NONE
 hi IncSearch guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
