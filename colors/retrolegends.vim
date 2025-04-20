@@ -1,3 +1,4 @@
+
 " retrolegends Colorscheme for vim
 " Url: maxmx03/retrolegends.nvim
 " Maintainer: Max Del Canto <github.com/maxmx03>
@@ -30,22 +31,22 @@ let g:retrolegends_markview = get(g:, 'retrolegends_markview', 0)
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   let g:terminal_ansi_colors = [
-    \ "#585858",
     \ "#1C1C1C",
-    \ "#0F1F0F",
-    \ "#707070",
     \ "#DADADA",
-    \ "#DADADA",
+    \ "#FFD933",
+    \ "#59FF59",
+    \ "#4C80FF",
+    \ "#E666FF",
     \ "#DADADA",
     \ "#40D9E6",
     \ "#DADADA",
     \ "#FFD933",
     \ "#59FF59",
-    \ "#FFD933",
-    \ "#DADADA",
     \ "#4C80FF",
     \ "#E666FF",
-    \ "#E666FF",
+    \ "#DADADA",
+    \ "#DADADA",
+    \ "#707070",
     \]
 endif
 
