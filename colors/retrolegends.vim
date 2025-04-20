@@ -23,22 +23,22 @@ g:retrolegends_transparency = get(g:, 'retrolegends_transparency', false)
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   g:terminal_ansi_colors = [
-    "#585858",
     "#1C1C1C",
-    "#0F1F0F",
-    "#707070",
     "#DADADA",
-    "#DADADA",
+    "#FFD933",
+    "#59FF59",
+    "#4C80FF",
+    "#E666FF",
     "#DADADA",
     "#40D9E6",
     "#DADADA",
     "#FFD933",
     "#59FF59",
-    "#FFD933",
-    "#DADADA",
     "#4C80FF",
     "#E666FF",
-    "#E666FF",
+    "#DADADA",
+    "#DADADA",
+    "#707070",
     ]
 endif
 
@@ -186,5 +186,4 @@ hi Todo guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
 hi Added guifg=#00af00 guibg=NONE gui=NONE cterm=NONE
 hi Changed guifg=#f7bf2b guibg=NONE gui=NONE cterm=NONE
 hi Removed guifg=#ff6666 guibg=NONE gui=NONE cterm=NONE
-
 unlet g:retrolegends_transparency
