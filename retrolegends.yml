@@ -118,6 +118,8 @@ highlights:
       fg: base_30_0B
     - name: WinSeparator
       fg: base_30_03
+    - name: VertSplit
+      link: WinSeparator
     - name: Folded
       fg: base_30_05
       bg: base_16_01
