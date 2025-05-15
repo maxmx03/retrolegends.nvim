@@ -5,11 +5,11 @@ vim9script
 # Maintainer: Max Del Canto <github.com/maxmx03>
 # License: MIT License
 
-if exists("g:loaded_retrolegends")
-  finish
-endif
+# if exists("g:loaded_retrolegends")
+#   finish
+# endif
 
-g:loaded_retrolegends = 1
+# g:loaded_retrolegends = 1
 
 hi clear
 
@@ -20,6 +20,15 @@ endif
 set termguicolors
 g:colors_name = 'retrolegends'
 g:retrolegends_transparency = get(g:, 'retrolegends_transparency', false)
+
+g:retrolegends_treesitter = get(g:, 'retrolegends_treesitter', false)
+g:retrolegends_lspconfig = get(g:, 'retrolegends_lspconfig', false)
+g:retrolegends_telescope = get(g:, 'retrolegends_telescope', false)
+g:retrolegends_dashboard = get(g:, 'retrolegends_dashboard', false)
+g:retrolegends_gitsigns = get(g:, 'retrolegends_gitsigns', false)
+g:retrolegends_nvimtree = get(g:, 'retrolegends_nvimtree', false)
+g:retrolegends_cmp = get(g:, 'retrolegends_cmp', false)
+g:retrolegends_markview = get(g:, 'retrolegends_markview', false)
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   g:terminal_ansi_colors = [
@@ -39,49 +48,9 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     "#DADADA",
     "#DADADA",
     "#707070",
-    ]
+  ]
 endif
 
-
-
-hi Conceal guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
-hi CurSearch guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
-hi Cursor guifg=NONE guibg=#45eb45 gui=NONE cterm=NONE
-hi lCursor guifg=NONE guibg=#45eb45 gui=NONE cterm=NONE
-hi CursorIM guifg=NONE guibg=#45eb45 gui=NONE cterm=NONE
-hi CursorColumn guifg=#000000 guibg=NONE gui=NONE cterm=NONE
-hi CursorLine guifg=NONE guibg=#0f1f0f gui=NONE cterm=NONE
-hi Directory guifg=#4c80ff guibg=NONE gui=NONE cterm=NONE
-hi DiffAdd guifg=#00af00 guibg=NONE gui=NONE cterm=NONE
-hi DiffChange guifg=#f7bf2b guibg=NONE gui=NONE cterm=NONE
-hi DiffDelete guifg=#ff6666 guibg=NONE gui=NONE cterm=NONE
-hi DiffText guifg=#dadada guibg=NONE gui=NONE cterm=NONE
-hi EndOfBuffer guifg=#0d0d0d guibg=NONE gui=NONE cterm=NONE
-hi TermCursor guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
-hi TermCursorNC guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
-hi ErrorMsg guifg=#ff005f guibg=NONE gui=NONE cterm=NONE
-hi WinSeparator guifg=#1c1c1c guibg=NONE gui=NONE cterm=NONE
-hi! link VertSplit WinSeparator
-hi Folded guifg=#dadada guibg=#1c1c1c gui=NONE cterm=NONE
-hi FoldColumn guifg=#dadada guibg=#1c1c1c gui=NONE cterm=NONE
-hi IncSearch guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
-hi Substitute guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
-hi LineNr guifg=#585858 guibg=NONE gui=NONE cterm=NONE
-hi LineNrAbove guifg=#585858 guibg=NONE gui=NONE cterm=NONE
-hi LineNrBelow guifg=#585858 guibg=NONE gui=NONE cterm=NONE
-hi CursorLineNr guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
-hi! link CursorLineFold Folded
-hi! link CursorLineSign SignColumn
-hi MatchParen guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
-hi ModeMsg guifg=#dadada guibg=NONE gui=NONE cterm=NONE
-hi! link MsgArea Normal
-hi NonText guifg=#707070 guibg=NONE gui=NONE cterm=NONE
-hi Normal guifg=#dadada guibg=#0d0d0d gui=NONE cterm=NONE
-if g:retrolegends_transparency
-  hi Normal guifg=#dadada guibg=NONE gui=NONE cterm=NONE
-endif
-hi SignColumn guifg=#dadada guibg=#0d0d0d gui=NONE cterm=NONE
-hi ColorColumn guifg=NONE guibg=#000000 gui=NONE cterm=NONE
 hi Conceal guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
 hi CurSearch guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
 hi Cursor guifg=NONE guibg=#45eb45 gui=NONE cterm=NONE
@@ -114,14 +83,12 @@ hi ModeMsg guifg=#dadada guibg=NONE gui=NONE cterm=NONE
 hi! link MsgArea Normal
 hi NonText guifg=#707070 guibg=NONE gui=NONE cterm=NONE
 hi Normal guifg=#dadada guibg=#0d0d0d gui=NONE cterm=NONE
-if g:retrolegends_transparency
-  hi Normal guifg=#dadada guibg=NONE gui=NONE cterm=NONE
-endif
 hi SignColumn guifg=#dadada guibg=#0d0d0d gui=NONE cterm=NONE
 hi ColorColumn guifg=NONE guibg=#000000 gui=NONE cterm=NONE
 hi NormalFloat guifg=#dadada guibg=#000000 gui=NONE cterm=NONE
 if g:retrolegends_transparency
   hi NormalFloat guifg=#dadada guibg=NONE gui=NONE cterm=NONE
+  hi Normal guifg=#dadada guibg=NONE gui=NONE cterm=NONE
 endif
 hi FloatBorder guifg=#1c1c1c guibg=NONE gui=NONE cterm=NONE
 hi FloatTitle guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
@@ -187,4 +154,5 @@ hi Todo guifg=#45eb45 guibg=NONE gui=NONE cterm=NONE
 hi Added guifg=#00af00 guibg=NONE gui=NONE cterm=NONE
 hi Changed guifg=#f7bf2b guibg=NONE gui=NONE cterm=NONE
 hi Removed guifg=#ff6666 guibg=NONE gui=NONE cterm=NONE
+
 unlet g:retrolegends_transparency
